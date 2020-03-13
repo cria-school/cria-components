@@ -1,5 +1,4 @@
 # cria-components
-<<<<<<< HEAD
 
 > Components fro Cria School UI&#x27;s
 
@@ -30,6 +29,3 @@ class Example extends Component {
 ## License
 
 MIT © [onathanmiranda](https://github.com/onathanmiranda)
-=======
-Components for Cria School UI's
->>>>>>> ec4bee06ea32f39da5db38fbd90c1ff68b5385bc
