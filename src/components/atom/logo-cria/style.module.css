@@ -1,6 +1,33 @@
-.img {
-    height: 100%;
+.figure {
     width: 100%;
-    object-fit: contain;
-    object-position: center;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.figure.horizontal,
+.figure.completa {
+    align-items: flex-end;
+    justify-content: center;
+}
+.figure.horizontal .cria,
+.figure.completa .cria {
+    width: 33.55%;
+}
+.figure.horizontal .schoolSide,
+.figure.completa .schoolSide {
+    width: 66.45%;
+}
+.figure.completa {
+    flex-wrap: wrap;
+}
+.figure.vertical {
+    flex-direction: column;
+}
+.figure.mini .cria,
+.figure.vertical .cria {
+    width: 100%;
+}
+.figure .tagLine,
+.figure .schoolBottom {
+    width: 100%;
 }

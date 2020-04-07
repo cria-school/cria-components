@@ -57,5 +57,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@svgr/cli": "^5.3.0",
+    "@svgr/core": "^5.3.0",
+    "@svgr/webpack": "^5.3.0"
+  }
 }
