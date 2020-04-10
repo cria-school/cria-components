@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-
-import LogoCria from "./components/atom/logo-cria";
+import LogoCria from "./components/atom/logo-cria"
+import Img from "./components/atom/img"
 
 export {
-    LogoCria
+    LogoCria,
+    Img
 }
