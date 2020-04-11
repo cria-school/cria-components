@@ -4,7 +4,6 @@ export default class Img extends Component {
     constructor(props){
         super(props)
         this.state = {
-            lazy : props.src,
             src : "",
             rendered: false
         }
@@ -14,33 +13,45 @@ export default class Img extends Component {
     }
     componentDidMount(){
         this.scrollListener = window.addEventListener('scroll', this.scrollListener)
-        const img = new Image(55,55)
-        img.src = "https://picsum.photos/55/55?grayscale&blur=10"
+        const img = new Image()
+        img.src = this.props.src.placeholder
         img.onload = this.setState({
             src: img.src
         })
     }
     scrollListener(e){
         const lazyImage = this.img.current
+        const lazyImageTop = lazyImage.getBoundingClientRect().top
+        const lazyImageBottom = lazyImage.getBoundingClientRect().bottom
+        const wIH = window.innerHeight
+        const lazyImageHalfHeight = wIH + (wIH - lazyImageTop);
+        const imageStyleIsVisible = getComputedStyle(lazyImage).display !== "none";
         
-        if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none"){
+        if ((lazyImageTop <= wIH && lazyImageBottom <= lazyImageHalfHeight) && imageStyleIsVisible){
             this.setState({
-                src : this.state.lazy,
-                rendered: true
+                rendered: true,
+                src: this.props.src.img
             })
         }
     }
     render() {
-        return ( 
-            <img
-                ref={this.img}
-                title={this.props.title || ""}
-                alt={this.props.alt || ""}
-                src={this.state.src}
-                className={this.props.className || ""}
-                height={this.props.height || ""}
-                width={this.props.width || ""}
-            />
+        return(
+            <picture ref={this.img} className={this.props.className || ""}>
+                {this.props.src.srcset.map((el, key) => {
+                    let srcset = this.state.rendered ? el.src : ""
+                    return (
+                        <source key={key} srcSet={srcset} type={el.type}/>
+                    )
+                })}
+                <img 
+                    ref={this.img}
+                    title={this.props.title || ""}
+                    alt={this.props.alt || ""}
+                    src={this.state.src}
+                    height={this.props.height || ""}
+                    width={this.props.width || ""}
+                />
+            </picture>
         )
     }
 }
