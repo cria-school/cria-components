@@ -12,7 +12,7 @@ export default class Img extends Component {
         this.img = React.createRef()
     }
     componentDidMount(){
-        this.scrollListener = window.addEventListener('scroll', this.scrollListener)
+        window.addEventListener('scroll', this.scrollListener)
         const img = new Image()
         img.src = this.props.src.placeholder
         img.onload = this.setState({
@@ -26,12 +26,14 @@ export default class Img extends Component {
         const wIH = window.innerHeight
         const lazyImageHalfHeight = wIH + (wIH - lazyImageTop);
         const imageStyleIsVisible = getComputedStyle(lazyImage).display !== "none";
-        
+        console.log("Listening to " + lazyImage)
         if ((lazyImageTop <= wIH && lazyImageBottom <= lazyImageHalfHeight) && imageStyleIsVisible){
             this.setState({
                 rendered: true,
                 src: this.props.src.img
             })
+            window.removeEventListener("scroll", this.scrollListener)
+            console.log("Stopped Listening to "+lazyImage)
         }
     }
     render() {
