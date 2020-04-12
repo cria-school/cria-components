@@ -4,22 +4,15 @@ export default class Img extends Component {
     constructor(props){
         super(props)
         this.state = {
-            src : "",
+            src : props.src.placeholder,
             rendered: false
         }
-        this.scrollListener = this.scrollListener.bind(this)
-        
         this.img = React.createRef()
     }
     componentDidMount(){
         window.addEventListener('scroll', this.scrollListener)
-        const img = new Image()
-        img.src = this.props.src.placeholder
-        img.onload = this.setState({
-            src: this.props.src.placeholder
-        })
     }
-    scrollListener(e){
+    scrollListener = (e) => {
         const lazyImage = this.img.current
         const lazyImageTop = lazyImage.getBoundingClientRect().top
         const lazyImageBottom = lazyImage.getBoundingClientRect().bottom
