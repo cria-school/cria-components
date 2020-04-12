@@ -16,7 +16,7 @@ export default class Img extends Component {
         const img = new Image()
         img.src = this.props.src.placeholder
         img.onload = this.setState({
-            src: img.src
+            src: this.props.src.placeholder
         })
     }
     scrollListener(e){
