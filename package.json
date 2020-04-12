@@ -1,10 +1,10 @@
 {
   "name": "cria-components",
   "version": "1.0.7",
-  "description": "Components fro Cria School UI",
+  "description": "Components for Cria School UI",
   "author": "onathanmiranda",
   "license": "MIT",
-  "repository": "onathanmiranda/cria-components",
+  "repository": "cria-school/cria-components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
