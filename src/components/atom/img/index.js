@@ -30,7 +30,7 @@ export default class Img extends Component {
         if ((lazyImageTop <= wIH && lazyImageBottom <= lazyImageHalfHeight) && imageStyleIsVisible){
             this.setState({
                 rendered: true,
-                src: this.props.src.img
+                src: this.props.src.img.src
             })
             window.removeEventListener("scroll", this.scrollListener)
         }
