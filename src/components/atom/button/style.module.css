@@ -1,0 +1,84 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: .4rem;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    padding: 1.7rem 4.2rem;
+    text-transform: lowercase;
+    min-width: 18.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: .1rem solid;
+}
+.button:disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+/*Pink Version*/
+.button.pink {
+    background-color: #F20774;
+    border-color: #F20774;
+    color: #fff;
+}
+.button.pink:hover {
+    background-color: #B70558;
+    border-color: #B70558;
+}
+.button.pink:disabled {
+    background-color: #C74B87;
+    border-color: #C74B87;
+}
+
+/*PinkOutlined Version*/
+.button.pinkoutlined {
+    background-color: transparent;
+    color: #B70558;
+    border-color: #B70558;
+    font-weight: 400;
+    transition: font-weight .3s ease-out, border-width .3s ease-out;
+}
+.button.pinkoutlined:hover {
+    font-weight: 600;
+    border-width: .2rem;
+}
+.button.pinkoutlined:disabled {
+    border-color: #C74B87;
+    color: #C74B87;
+}
+
+/*Purple Version*/
+.button.purple {
+    background-color: #8B1EFF;
+    border-color: #8B1EFF;
+    color: #fff;
+}
+.button.purple:hover {
+    background-color: #6115B2;
+    border-color: #6115B2;
+}
+.button.purple:disabled {
+    background-color: #A781D4;
+    border-color: #A781D4;
+}
+
+/*PurpleOutlined Version*/
+.button.purpleoutlined {
+    background-color: transparent;
+    color: #8B1EFF;
+    border-color: #8B1EFF;
+    font-weight: 400;
+    transition: font-weight .3s ease-out, border-width .3s ease-out;
+}
+.button.purpleoutlined:hover {
+    font-weight: 600;
+    border-width: .2rem;
+}
+.button.purpleoutlined:disabled {
+    border-color: #A781D4;
+    color: #A781D4;
+}

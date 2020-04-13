@@ -17,10 +17,9 @@ export default class Img extends Component {
         const lazyImageTop = lazyImage.getBoundingClientRect().top
         const lazyImageBottom = lazyImage.getBoundingClientRect().bottom
         const wIH = window.innerHeight
-        const lazyImageHalfHeight = wIH + (wIH - lazyImageTop);
         const imageStyleIsVisible = getComputedStyle(lazyImage).display !== "none"
         
-        if ((lazyImageTop <= wIH && lazyImageBottom <= lazyImageHalfHeight) && imageStyleIsVisible){
+        if ((lazyImageTop <= wIH && lazyImageBottom > 0) && imageStyleIsVisible){
             this.setState({
                 rendered: true,
                 src: this.props.src.img.src
