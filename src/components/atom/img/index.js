@@ -3,14 +3,25 @@ import React, { Component } from 'react'
 export default class Img extends Component {
     constructor(props){
         super(props)
-        this.state = {
-            src : props.src.placeholder,
-            rendered: false
+        if(typeof(props.src) === "string"){
+            this.state = {
+                src: props.src,
+                rendered: true
+            }
+        } else {
+            this.state = {
+                src : props.src.placeholder,
+                rendered: false
+            }
+            this.img = React.createRef()
         }
-        this.img = React.createRef()
     }
     componentDidMount(){
         window.addEventListener('scroll', this.scrollListener)
+        this.scrollListener()
+    }
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.scrollListener)
     }
     scrollListener = (e) => {
         const lazyImage = this.img.current
@@ -30,7 +41,7 @@ export default class Img extends Component {
     render() {
         return(
             <picture ref={this.img} className={this.props.className || ""}>
-                {this.props.src.srcset.map((el, key) => {
+                {this.props.src.srcset && this.props.src.srcset.map((el, key) => {
                     let srcset = this.state.rendered ? el.src : ""
                     return (
                         <source key={key} srcSet={srcset} type={el.type}/>

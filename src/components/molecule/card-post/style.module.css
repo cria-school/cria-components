@@ -1,0 +1,53 @@
+.card {
+    margin: 0 1.3rem 3.4rem;
+    max-width: 24.8rem;
+    position: relative;
+}
+
+.card:after {
+    content: "";
+    display: block;
+    background: #F20574;
+    height: .1rem;
+    margin-top: 1.3rem;
+    width: 9.6rem
+}
+
+.title {
+    font-size: 2.2rem;
+    margin: .5rem 0 0;
+    color: #fff;
+}
+
+.category {
+    padding: .5rem 2.1rem;
+    min-width: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: normal;
+}
+
+.categoryLink {
+    position: absolute;
+    top: 0;
+    left: 1.3rem;
+    transform: translateY(-50%)
+}
+
+.picture img {
+    width: 100%;
+    height: 17.5rem;
+    object-fit: cover;
+    object-position: center;
+    border: .1rem solid #8B1EFF;
+    border-radius: .4rem;
+}
+
+.date {
+    text-transform: uppercase;
+    margin-top: .5rem;
+    color: #F20574;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
