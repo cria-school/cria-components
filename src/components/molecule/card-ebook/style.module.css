@@ -1,0 +1,30 @@
+.card {
+    position: relative;
+    width: 100%;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+}
+.card:hover {
+    transform: scale(.98);
+}
+.card picture {
+    width: 100%;
+    height: auto;
+}
+.card picture img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: .5rem;
+}
+.category {
+    position: absolute;
+    right: 1.3rem;
+    top: 1.3rem;
+    padding: .5rem 2.1rem;
+    min-width: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: normal;
+}

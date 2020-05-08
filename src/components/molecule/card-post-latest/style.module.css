@@ -1,5 +1,4 @@
-.cardLink {
-    position: relative;
+.cardWrapper {
     max-width: 61.5rem;
     width: 100%;
     position: relative;
@@ -7,7 +6,7 @@
     display: block;
     margin: 0 0 3.4rem;
     border: .1rem solid #8B1EFF;
-    border-radius: .4rem;
+    border-radius: .5rem;
     overflow: hidden;
 }
 .card {
@@ -81,7 +80,7 @@
 }
 
 @media (min-width: 1024px) {
-    .cardLink {
+    .cardWrapper {
         margin: 0;
     }
     .contentWrapper {

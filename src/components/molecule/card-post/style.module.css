@@ -41,7 +41,7 @@
     object-fit: cover;
     object-position: center;
     border: .1rem solid #8B1EFF;
-    border-radius: .4rem;
+    border-radius: .5rem;
 }
 
 .date {
