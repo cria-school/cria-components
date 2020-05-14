@@ -4,7 +4,7 @@
     align-items: center;
     align-content: center;
     border-radius: .5rem;
-    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-out;
     cursor: pointer;
     text-align: center;
     padding: 1.7rem 4.2rem;
@@ -13,12 +13,16 @@
     font-size: 2rem;
     font-weight: 600;
     border: .1rem solid;
+    transform: scale(1);
+    transform-origin: center;
 }
 .button:disabled {
     pointer-events: none;
     cursor: default;
 }
-
+.button:hover {
+    transform: scale(1.01);
+}
 /*Pink Version*/
 .button.pink {
     background-color: #F20774;
@@ -40,11 +44,9 @@
     color: #B70558;
     border-color: #B70558;
     font-weight: 400;
-    transition: font-weight .3s ease-out, border-width .3s ease-out;
 }
 .button.pinkoutlined:hover {
-    font-weight: 600;
-    border-width: .2rem;
+    background-color: rgba(183, 5, 88,.1)
 }
 .button.pinkoutlined:disabled {
     border-color: #C74B87;
@@ -72,11 +74,9 @@
     color: #8B1EFF;
     border-color: #8B1EFF;
     font-weight: 400;
-    transition: font-weight .3s ease-out, border-width .3s ease-out;
 }
 .button.purpleoutlined:hover {
-    font-weight: 600;
-    border-width: .2rem;
+    background-color: rgba(139, 30, 255,.1)
 }
 .button.purpleoutlined:disabled {
     border-color: #A781D4;
