@@ -4,7 +4,7 @@ import style from './style.module.css';
 
 export default class Button extends PureComponent {
     
-    buttonStyle = this.props.style ? style[this.props.style] : style.pink
+    buttonStyle = this.props.colorSchema ? style[this.props.colorSchema] : style.pink
 
     render(){
         return(
