@@ -18,12 +18,12 @@ export default class LogoCria extends Component {
         
         const { state } = this
         
-        const COMPLETA = (state.version === "completa") || false
+        const COMPLETA   = (state.version === "completa")   || false
         const HORIZONTAL = (state.version === "horizontal") || false
-        const VERTICAL = (state.version === "vertical") || false
+        const VERTICAL   = (state.version === "vertical")   || false
 
         return (
-            <figure className={`${style.figure} ${style[state.version]}`}>
+            <figure className={`${style.figure} ${style[state.version]} ${this.props.className}`}>
                 <Cria className={style.cria}/> {(COMPLETA || HORIZONTAL) && <SchoolSide className={style.schoolSide}/>}
                 {(COMPLETA) && <TagLine className={style.tagLine}/>}
                 {(VERTICAL) && <SchoolBottom className={style.schoolBottom}/>}
