@@ -14,15 +14,15 @@ export default class Input extends PureComponent {
     render() {
         return (
             <input 
-                type={this.props.type || "text"} 
-                name={this.props.type} 
-                value={this.props.value}
-                placeholder={this.props.placeholder || "placeholder"}
-                className={`${this.props.className} ${style.input}`}
-                onChange={this.onChange}
-                onKeyUp={this.onKeyUp}
-                required={this.props.required || false}
-                disabled={this.props.disabled || false}
+                type        = {this.props.type || "text"} 
+                name        = {this.props.name} 
+                value       = {this.props.value}
+                placeholder = {this.props.placeholder || ""}
+                className   = {`${this.props.className} ${style.input}`}
+                onChange    = {this.onChange}
+                onKeyUp     = {this.onKeyUp}
+                required    = {this.props.required || false}
+                disabled    = {this.props.disabled || false}
             />
         )
     }
