@@ -1,5 +1,4 @@
 .card {
-    margin: 0 1.3rem 3.4rem;
     max-width: 24.8rem;
     position: relative;
 }
@@ -14,7 +13,7 @@
 }
 
 .title {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     margin: .5rem 0 0;
     color: #fff;
 }
@@ -22,7 +21,7 @@
 .category {
     padding: .5rem 2.1rem;
     min-width: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     font-weight: normal;
@@ -48,6 +47,6 @@
     text-transform: uppercase;
     margin-top: .5rem;
     color: #F20574;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: .1rem;
 }
