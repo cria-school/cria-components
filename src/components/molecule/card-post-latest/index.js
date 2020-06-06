@@ -14,7 +14,7 @@ export default class CardPostLatest extends PureComponent {
                     <div className={style.overlay}></div>
                     <div className={style.contentWrapper}>
                         <div className={style.categoryLink} href={this.props.category.href} title={this.props.category.name}>
-                            <Button className={style.category} style="purple">{this.props.category.name}</Button>
+                            <Button className={style.category} colorSchema="purple">{this.props.category.name}</Button>
                         </div>
                         <p className={style.date}>{this.props.date}</p>
                         <h3 className={style.title}>{this.props.title}</h3>

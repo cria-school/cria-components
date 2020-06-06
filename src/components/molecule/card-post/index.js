@@ -10,7 +10,7 @@ export default class CardPost extends PureComponent {
         return (
             <article className={style.card}>
                 <div className={style.categoryLink} href={this.props.category.href} title={this.props.category.name}>
-                    <Button className={style.category} style="purple">{this.props.category.name}</Button>
+                    <Button className={style.category} colorSchema="purple">{this.props.category.name}</Button>
                 </div>
                 <Img title={this.props.title} className={style.picture} src={this.props.picture} alt={this.props.title}/>
                 <p className={style.date}>{this.props.date}</p>

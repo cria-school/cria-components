@@ -12,7 +12,7 @@ export default class CardEbook extends PureComponent {
         return (
             <a href={href} title={title} target={"_blank"} rel="noreferrer noopenner">
                 <article className={`${className} ${style.card}`}>
-                    <Button className={style.category} style="purple">{category.name}</Button>
+                    <Button className={style.category} colorSchema="purple">{category.name}</Button>
                     <Img src={src} title={title} />
                 </article>
             </a>
