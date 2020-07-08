@@ -1,6 +1,6 @@
 {
   "name": "cria-components",
-  "version": "1.0.20",
+  "version": "1.0.23",
   "description": "Components for Cria School UI",
   "author": "onathanmiranda",
   "license": "MIT",
@@ -17,9 +17,7 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "yarn run build && yarn publish"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
