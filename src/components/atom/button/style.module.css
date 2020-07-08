@@ -40,7 +40,7 @@
 /*PinkOutlined Version*/
 .button.pinkoutlined {
     background-color: transparent;
-    color: #B70558;
+    color: #fff;
     border-color: #B70558;
     font-weight: 400;
 }
@@ -70,7 +70,7 @@
 /*PurpleOutlined Version*/
 .button.purpleoutlined {
     background-color: transparent;
-    color: #8B1EFF;
+    color: #fff;
     border-color: #8B1EFF;
     font-weight: 400;
 }
