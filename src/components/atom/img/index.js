@@ -30,7 +30,7 @@ export default class Img extends Component {
         const lazyImageBottom = lazyImage.getBoundingClientRect().bottom
         const wIH = window.innerHeight
         const imageStyleIsVisible = getComputedStyle(lazyImage).display !== "none"
-        
+
         if ((lazyImageTop <= wIH && lazyImageBottom > 0) && imageStyleIsVisible){
             this.setState({
                 rendered: true,
@@ -41,20 +41,25 @@ export default class Img extends Component {
     }
 
     render() {
-        
+
         const shouldInsertSrcSet = this.state.isSourceObject && this.props.src.srcset
 
         return(
             <picture ref={this.img} className={this.props.className || ""}>
-                {shouldInsertSrcSet && 
+                {shouldInsertSrcSet &&
                     this.props.src.srcset.map((el, key) => {
                         let srcset = this.state.rendered ? el.src : ""
                         return (
-                            <source key={key} srcSet={srcset} type={el.type}/>
+                            <source
+                                key = {key}
+                                type = {el.type}
+                                srcSet = {srcset}
+                                media = {el.media || null}
+                            />
                         )
                     })
                 }
-                <img 
+                <img
                     title={this.props.title || ""}
                     alt={this.props.alt || ""}
                     src={this.state.src}
