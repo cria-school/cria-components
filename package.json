@@ -1,6 +1,6 @@
 {
   "name": "cria-components",
-  "version": "1.0.23",
+  "version": "1.1.00",
   "description": "Components for Cria School UI",
   "author": "onathanmiranda",
   "license": "MIT",
@@ -59,6 +59,7 @@
     "@svgr/cli": "^5.3.0",
     "@svgr/core": "^5.3.0",
     "@svgr/webpack": "^5.3.0",
+    "all": "^0.0.0",
     "react-router-dom": "^5.1.2"
   }
 }
