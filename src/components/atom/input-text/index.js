@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 
 import style from './style.module.css'
 
-export default class Input extends PureComponent {
+class Input extends PureComponent {
     onChange = (e) => {
         if (typeof this.props.onChange === 'function') this.props.onChange(e)
     }
@@ -36,7 +36,10 @@ export default class Input extends PureComponent {
                 required    = {this.props.required || false}
                 disabled    = {this.props.disabled || false}
                 style = {this.props.style}
+                inputMode = {this.props.inputMode}
             />
         )
     }
 }
+
+export default Input
