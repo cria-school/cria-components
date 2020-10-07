@@ -15,6 +15,10 @@ export default class Input extends PureComponent {
         if (typeof this.props.onKeyPress === 'function') this.props.onKeyPress(e)
     }
 
+    onKeyDown = (e) => {
+        if (typeof this.props.onKeyDown === 'function') this.props.onKeyDown(e)
+    }
+
     render() {
         return (
             <input
@@ -26,6 +30,7 @@ export default class Input extends PureComponent {
                 onChange    = {this.onChange}
                 onKeyUp     = {this.onKeyUp}
                 onKeyPress  = {this.onKeyPress}
+                onKeyDown   = {this.onKeyDown}
                 pattern     = {this.props.pattern}
                 maxLength   = {this.props.maxLength}
                 required    = {this.props.required || false}
