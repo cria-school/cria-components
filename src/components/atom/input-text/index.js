@@ -20,6 +20,7 @@ class Input extends PureComponent {
     }
 
     render() {
+        console.log('input link')
         return (
             <input
                 type        = {this.props.type || "text"}
@@ -31,6 +32,8 @@ class Input extends PureComponent {
                 onKeyUp     = {this.onKeyUp}
                 onKeyPress  = {this.onKeyPress}
                 onKeyDown   = {this.onKeyDown}
+                onFocus = {this.props.onFocus}
+                onBlur = {this.props.onBlur}
                 pattern     = {this.props.pattern}
                 maxLength   = {this.props.maxLength}
                 required    = {this.props.required || false}
