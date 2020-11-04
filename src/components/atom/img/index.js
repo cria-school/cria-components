@@ -13,22 +13,25 @@ export default class Img extends Component {
         this.img = React.createRef()
     }
 
-    static getDerivedStateFromProps (props, state) {
-        const isSourceObject = typeof(props.src) === "object"
-
-        // this.scrollListener()
-
-        return {
-            ...state,
-            src: isSourceObject ? (state.rendered ? props.src.img.src : props.src.placeholder) : props.src,
-            isSourceObject
-        }
-    }
-
     componentDidMount(){
         window.addEventListener('scroll', this.scrollListener)
         window.addEventListener('load', this.scrollListener)
         this.scrollListener()
+    }
+
+    componentDidUpdate (prevProps) {
+        if (
+            this.props.placeholder !== prevProps.placeholder
+            ||
+            this.props.src !== prevProps.src
+        )   {
+            const isSourceObject = typeof(props.src) === "object"
+
+            this.setState({
+                src: isSourceObject ? props.src.placeholder : props.src,
+                isSourceObject
+            })
+        }
     }
 
     componentWillUnmount(){
