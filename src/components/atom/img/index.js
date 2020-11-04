@@ -16,9 +16,11 @@ export default class Img extends Component {
     static getDerivedStateFromProps (props, state) {
         const isSourceObject = typeof(props.src) === "object"
 
+        // this.scrollListener()
+
         return {
             ...state,
-            src: (!state.rendered) ? (isSourceObject ? props.src.placeholder : props.src) : state.src,
+            src: isSourceObject ? (state.rendered ? props.src.img.src : props.src.placeholder) : props.src,
             isSourceObject
         }
     }
