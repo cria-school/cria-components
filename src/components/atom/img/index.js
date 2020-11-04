@@ -18,7 +18,7 @@ export default class Img extends Component {
 
         return {
             ...state,
-            src: isSourceObject ? props.src.placeholder : props.src,
+            src: (!state.rendered) ? (isSourceObject ? props.src.placeholder : props.src) : state.src,
             isSourceObject
         }
     }
@@ -51,7 +51,6 @@ export default class Img extends Component {
     }
 
     render() {
-
         const shouldInsertSrcSet = this.state.isSourceObject && this.props.src.srcset
 
         return(
