@@ -10,6 +10,8 @@ import CardEbook from "./components/molecule/card-ebook"
 import CardPost from "./components/molecule/card-post"
 import CardPostLatest from "./components/molecule/card-post-latest"
 
+import CriaCheckout from "./components/organism/checkout"
+
 export {
     LogoCria,
     Button,
@@ -18,5 +20,6 @@ export {
     CardEbook,
     CardPost,
     CardPostLatest,
-    IconLoading
+    IconLoading,
+
 }

@@ -20,7 +20,6 @@ class Input extends PureComponent {
     }
 
     render() {
-        console.log('input link')
         return (
             <input
                 type        = {this.props.type || "text"}

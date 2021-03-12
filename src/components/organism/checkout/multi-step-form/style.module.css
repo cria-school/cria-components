@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+}
+.header_bullet {
+    background: gray;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+.header_bullet.current {
+    background: black;
+}
